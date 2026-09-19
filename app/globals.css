@@ -3,20 +3,20 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --color-primary: #df321b;
+  --color-primary-hover: #a82513;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-franklin: var(--font-libre-franklin), sans-serif;
+  --font-baskerville: var(--font-libre-baskerville), sans-serif;
+  --font-sourceserif: var(--font-source_serif_4), sans-serif;
 }
 
 body {
