@@ -7,10 +7,11 @@ import {
   Source_Serif_4,
 } from "next/font/google";
 import "./globals.css";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
-import PromotionBaner from "./components/header/promotion-banner";
-import NewsLetter from "./components/footer/news-letter";
+import Header from "@/components/header/header";
+import Footer from "@/components/footer/footer";
+import PromotionBaner from "@/components/header/promotion-banner";
+import NewsLetter from "@/components/footer/news-letter";
+import QueryProvider from "@/components/providers/query-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,11 +52,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} ${libreFranklin.variable} ${libreBaskerville.variable} ${sourceSerif4.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Header />
-        <PromotionBaner />
-        <div className="m-auto w-[60%] mt-50">{children}</div>
-        <NewsLetter />
-        <Footer />
+        <QueryProvider>
+          <Header />
+          <PromotionBaner />
+          <div className="m-auto w-[60%] mt-50">{children}</div>
+          <NewsLetter />
+          <Footer />
+        </QueryProvider>
       </body>
     </html>
   );

@@ -3,8 +3,15 @@ export interface IRecipe {
   title: string;
   image: string;
   rating?: number;
+  cuisine?: string;
   meal_type: string;
   duration?: string;
+  userId: string;
+}
+
+export interface IWriters {
+  title: string;
+  image: string;
 }
 
 export interface ApiRecipe {

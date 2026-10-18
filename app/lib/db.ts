@@ -15,9 +15,9 @@ export const db = {
     }) => {
       return (
         users.find(
-          (u) =>
-            (where.email && u.email === where.email) ||
-            (where.id && u.id === where.id),
+          (user) =>
+            (where.email && user.email === where.email) ||
+            (where.id && user.id === where.id),
         ) ?? null
       );
     },

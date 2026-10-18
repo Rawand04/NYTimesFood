@@ -13,6 +13,15 @@ const nextConfig: NextConfig = {
       {
         hostname: "cdn.dummyjson.com",
       },
+      {
+        hostname: "www.themealdb.com",
+      },
+      {
+        hostname: "randomuser.me",
+      },
+      {
+        hostname: "images.unsplash.com",
+      },
     ],
   },
 };
